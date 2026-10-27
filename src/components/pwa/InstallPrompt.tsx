@@ -105,7 +105,7 @@ export function InstallPrompt(): React.ReactElement | null {
 
             <div className="flex-1">
               <h3 className="font-semibold text-slate-900 text-sm mb-1">
-                Install CCS Workbench
+                Install CCS Workbench Classic
               </h3>
               <p className="text-xs text-slate-600 mb-3">
                 Install as an app for offline access, faster loading, and a native experience.
@@ -140,7 +140,7 @@ export function InstallPrompt(): React.ReactElement | null {
 
             <div className="flex-1">
               <h3 className="font-semibold text-slate-900 text-sm">
-                Install CCS Workbench
+                Install CCS Workbench Classic
               </h3>
               <p className="text-xs text-slate-600">
                 Get the full app experience

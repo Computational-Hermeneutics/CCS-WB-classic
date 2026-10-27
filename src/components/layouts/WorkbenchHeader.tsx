@@ -255,8 +255,8 @@ export const WorkbenchHeader = memo(function WorkbenchHeader(props: WorkbenchHea
       <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
         <span
           className="flex-shrink-0"
-          title="CCS Workbench — close reading of a single artefact of code"
-          aria-label="CCS Workbench"
+          title="CCS Workbench Classic — pre-bench-kit CCS-WB, close reading of a single artefact of code"
+          aria-label="CCS Workbench Classic"
         >
           <img
             src="/branding/ch/tools/ccs-wb.svg"
@@ -274,8 +274,8 @@ export const WorkbenchHeader = memo(function WorkbenchHeader(props: WorkbenchHea
           )}
           title={isAlphaVersion ? "Alpha Test Version" : undefined}
         >
-          <span className="hidden sm:inline">CCS Workbench</span>
-          <span className="sm:hidden">CCS-WB</span>
+          <span className="hidden sm:inline">CCS Workbench <span className="text-xs uppercase tracking-wider opacity-70 ml-1">Classic</span></span>
+          <span className="sm:hidden">CCS-WB <span className="text-[0.6rem] uppercase tracking-wider opacity-70">Classic</span></span>
         </button>
         {/* Mode badge - clickable to switch */}
         <div className="relative" data-dropdown>

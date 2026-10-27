@@ -1,6 +1,6 @@
 {
-  "name": "Critical Code Studies Workbench",
-  "short_name": "CCS Workbench",
+  "name": "Critical Code Studies Workbench — Classic",
+  "short_name": "CCS Workbench Classic",
   "description": "A digital platform for critical code studies, hermeneutic engagement with software, and annotation of computational artifacts",
   "start_url": "/",
   "display": "standalone",

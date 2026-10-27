@@ -158,8 +158,8 @@ export default function WelcomePage() {
             <div className="flex items-center gap-2.5">
               <span
                 className="flex-shrink-0"
-                title="CCS Workbench — close reading of a single artefact of code"
-                aria-label="CCS Workbench"
+                title="CCS Workbench Classic — pre-bench-kit CCS-WB"
+                aria-label="CCS Workbench Classic"
               >
                 <img
                   src="/branding/ch/tools/ccs-wb.svg"
@@ -173,8 +173,8 @@ export default function WelcomePage() {
                   ? "text-yellow-600 dark:text-yellow-500"
                   : "text-ink"
               )} title={isAlphaVersion ? "Alpha Test Version" : undefined}>
-                <span className="hidden sm:inline">Critical Code Studies Workbench</span>
-                <span className="sm:hidden">CCS Workbench</span>
+                <span className="hidden sm:inline">Critical Code Studies Workbench <span className="text-xs uppercase tracking-wider opacity-70 ml-1">Classic</span></span>
+                <span className="sm:hidden">CCS Workbench <span className="text-[0.6rem] uppercase tracking-wider opacity-70">Classic</span></span>
                 <span className="font-sans text-[9px] text-slate/50 ml-2 align-bottom absolute bottom-0 left-full whitespace-nowrap">
                   v{appVersion}
                 </span>

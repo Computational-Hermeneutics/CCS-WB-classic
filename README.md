@@ -3,8 +3,9 @@
 > ## This repository is now the archived pre-bench-kit CCS-WB.
 >
 > Active development has moved to
-> **[Computational-Hermeneutics/CCS-WB](https://github.com/Computational-Hermeneutics/CCS-WB)**,
-> which rebuilds CCS-WB on top of
+> **[Computational-Hermeneutics/CCSbench](https://github.com/Computational-Hermeneutics/CCSbench)**
+> (sibling to [LLMbench](https://github.com/dmberry/LLMbench) in the
+> *-bench family), which rebuilds the Workbench on top of
 > [critical-code-studies/bench-kit](https://github.com/critical-code-studies/bench-kit)
 > (shared with the SHRDLU, Spacewar!, ELIZA and Melville benches), adds
 > side-by-side comparison, Kintsugi-mode repairs, a project builder, and a
@@ -17,7 +18,7 @@
 > development will land here. For history and attribution, see the new
 > repository's `GENEALOGY.md`.
 
-**Version 5.2.0** | CCS Methodology v2.7
+**Version 5.2.1** (Classic rebrand) | Final frozen baseline: v5.2.0 / tag `pre-bench-kit` | CCS Methodology v2.7
 
 A web application for close reading and hermeneutic analysis of software as cultural artefact.
 

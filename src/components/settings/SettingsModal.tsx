@@ -1254,10 +1254,10 @@ export function SettingsModal({
                   />
                   <div>
                     <h3 className="font-display text-sm text-ink mb-0.5">
-                      Critical Code Studies Workbench
+                      Critical Code Studies Workbench <span className="text-xs uppercase tracking-wider opacity-60">Classic</span>
                     </h3>
                     <p className="font-sans text-caption text-slate">
-                      A web application for close reading and hermeneutic analysis of software as cultural artefact.
+                      The pre-bench-kit CCS-WB, preserved as a scholarly artefact. Active development has moved to <a href="https://github.com/Computational-Hermeneutics/CCSbench" target="_blank" rel="noopener noreferrer" className="text-burgundy hover:text-burgundy-dark">CCSbench</a>, rebuilt on <a href="https://github.com/critical-code-studies/bench-kit" target="_blank" rel="noopener noreferrer" className="text-burgundy hover:text-burgundy-dark">bench-kit</a>.
                     </p>
                   </div>
                 </div>
@@ -1305,12 +1305,20 @@ export function SettingsModal({
                 <h4 className="font-display text-caption text-ink mb-1.5">Links</h4>
                 <div className="space-y-1.5">
                   <a
-                    href="https://github.com/Computational-Hermeneutics/CCS-WB"
+                    href="https://github.com/Computational-Hermeneutics/CCS-WB-classic"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block font-sans text-caption text-burgundy hover:text-burgundy-dark transition-colors"
                   >
-                    GitHub Repository →
+                    GitHub Repository (Classic) →
+                  </a>
+                  <a
+                    href="https://github.com/Computational-Hermeneutics/CCSbench"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block font-sans text-caption text-burgundy hover:text-burgundy-dark transition-colors"
+                  >
+                    CCSbench (successor) →
                   </a>
                   <a
                     href="https://computational-hermeneutics.github.io"

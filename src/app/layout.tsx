@@ -41,7 +41,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Critical Code Studies Workbench",
+  title: "Critical Code Studies Workbench — Classic",
   description:
     "Annotation and digital methods for the hermeneutic analysis of code. Available as a web app or desktop application.",
   keywords: [
@@ -52,15 +52,15 @@ export const metadata: Metadata = {
     "code annotation",
   ],
   openGraph: {
-    title: "Critical Code Studies Workbench",
+    title: "Critical Code Studies Workbench — Classic",
     description:
       "Annotation and digital methods for the hermeneutic analysis of code. Available as a web app or desktop application.",
     type: "website",
-    siteName: "CCS Workbench",
+    siteName: "CCS Workbench Classic",
   },
   twitter: {
     card: "summary",
-    title: "Critical Code Studies Workbench",
+    title: "Critical Code Studies Workbench — Classic",
     description:
       "Annotation and digital methods for the hermeneutic analysis of code.",
   },
@@ -84,7 +84,7 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="CCS Workbench" />
+        <meta name="apple-mobile-web-app-title" content="CCS Workbench Classic" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
 

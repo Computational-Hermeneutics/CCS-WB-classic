@@ -19,10 +19,10 @@ export async function getAppVersion(): Promise<string> {
 }
 
 /** Application name */
-export const APP_NAME = "Critical Code Studies Workbench";
+export const APP_NAME = "Critical Code Studies Workbench — Classic";
 
 /** Short application name */
-export const APP_NAME_SHORT = "CCS-WB";
+export const APP_NAME_SHORT = "CCS-WB Classic";
 
 /** Creator/Author */
 export const APP_CREATOR = "Co-created by David M. Berry at CCSWG 2026";
