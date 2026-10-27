@@ -1,0 +1,22 @@
+{
+  "upload_type": "software",
+  "title": "Critical Code Studies Workbench, Classic (pre-bench-kit)",
+  "creators": [
+    {
+      "name": "Berry, David M.",
+      "affiliation": "University of Sussex"
+    }
+  ],
+  "license": "GPL-3.0-or-later",
+  "access_right": "open",
+  "keywords": [
+    "critical code studies",
+    "code hermeneutics",
+    "software studies",
+    "digital humanities",
+    "code annotation",
+    "close reading",
+    "software as cultural artefact"
+  ],
+  "description": "The pre-bench-kit Critical Code Studies Workbench. A browser-based IDE for close reading of software as cultural artefact: three modes of engagement (Analyze, Learn, Create), six typed line-anchored annotations (Observation, Question, Metaphor, Pattern, Context, Critique), a browser-direct AI co-reader across seven providers with keys the user holds, drift-aware name-based merge of .ccs project files between collaborators, and a built-in corpus of recoverable historical software (FLOW-MATIC 1958, IPL-V 1958, Spacewar! 1962, ELIZA 1965 with thirty scholarly annotations, Apollo 11 Comanche055 1969). Preserved as a scholarly artefact in its own right; active development has moved to the bench-kit-based successor, CCSbench, at https://github.com/Computational-Hermeneutics/CCSbench."
+}

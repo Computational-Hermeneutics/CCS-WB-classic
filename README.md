@@ -18,7 +18,9 @@
 > development will land here. For history and attribution, see the new
 > repository's `GENEALOGY.md`.
 
-**Version 5.2.1** (Classic rebrand) | Final frozen baseline: v5.2.0 / tag `pre-bench-kit` | CCS Methodology v2.7
+**Version 5.2.2** (Classic rebrand, Zenodo metadata) | Final frozen baseline: v5.2.0 / tag `pre-bench-kit` | CCS Methodology v2.7
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23714574.svg)](https://doi.org/10.5281/zenodo.23714574) &nbsp; <sub>(concept DOI, resolves to the latest archived snapshot)</sub>
 
 A web application for close reading and hermeneutic analysis of software as cultural artefact.
 
