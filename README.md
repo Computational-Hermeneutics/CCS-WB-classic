@@ -1,4 +1,21 @@
-# Critical Code Studies Workbench
+# Critical Code Studies Workbench — Classic
+
+> ## This repository is now the archived pre-bench-kit CCS-WB.
+>
+> Active development has moved to
+> **[Computational-Hermeneutics/CCS-WB](https://github.com/Computational-Hermeneutics/CCS-WB)**,
+> which rebuilds CCS-WB on top of
+> [critical-code-studies/bench-kit](https://github.com/critical-code-studies/bench-kit)
+> (shared with the SHRDLU, Spacewar!, ELIZA and Melville benches), adds
+> side-by-side comparison, Kintsugi-mode repairs, a project builder, and a
+> downloadable standalone app.
+>
+> This repository is **frozen at v5.2.0** (tag
+> [`pre-bench-kit`](https://github.com/Computational-Hermeneutics/CCS-WB-classic/releases/tag/pre-bench-kit))
+> and preserved as a scholarly artefact — the pre-kit CCS-WB design, in its
+> own right an episode in the practice of Critical Code Studies. No further
+> development will land here. For history and attribution, see the new
+> repository's `GENEALOGY.md`.
 
 **Version 5.2.0** | CCS Methodology v2.7
 
