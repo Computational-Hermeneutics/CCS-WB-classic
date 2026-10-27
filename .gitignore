@@ -83,3 +83,6 @@ assistant.db
 # Knowledge files (local working documents, not for GitHub)
 knowledge/
 PROJECT_NOTES.md
+
+# Local-only inbox / scratch (David, 2026-10-27 convention); never committed
+_tmp/
