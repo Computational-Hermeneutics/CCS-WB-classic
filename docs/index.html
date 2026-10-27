@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CCS Workbench Classic · close reading of code as cultural text</title>
+  <meta name="description" content="The pre-bench-kit Critical Code Studies Workbench. Three modes (Analyze, Learn, Create), six annotation types, a browser-direct AI roster, local-first with an optional self-hosted cloud. Preserved as a scholarly artefact; the successor is CCSbench.">
+  <meta name="theme-color" content="#f4f0e6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#11131a" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="CCS Workbench Classic">
+  <meta property="og:description" content="Close reading of code as cultural text. Pre-bench-kit CCS-WB, preserved as a scholarly artefact.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://computational-hermeneutics.github.io/CCS-WB-classic/">
+  <script>(function(){try{var t=localStorage.getItem('ccs-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css?v=1">
+  <link rel="stylesheet" href="assets/css/page.css?v=1">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="CCS Workbench Classic">
+        <span class="brand-block">
+          <span class="brand-name">CCS&nbsp;Workbench <span class="classic-tag">Classic</span></span>
+          <span class="brand-tagline">pre-bench-kit CCS-WB, preserved as a scholarly artefact</span>
+        </span>
+      </a>
+      <nav class="site-nav">
+        <a class="nav-top nav-direct" href="#what">What it is</a>
+        <a class="nav-top nav-direct" href="#quick">Quick start</a>
+        <a class="nav-top nav-direct" href="#modes">Modes</a>
+        <a class="nav-top nav-direct" href="#example">Example</a>
+        <a class="nav-top nav-direct" href="#ai">AI setup</a>
+        <a class="nav-top nav-direct" href="#trouble">Troubleshooting</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle light and dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-wrap">
+      <p class="eyebrow">Critical Code Studies Workbench · Classic</p>
+      <h1>Reading code as a cultural text, in the browser.</h1>
+      <p class="lede">An annotation workbench for close reading of software source: six colour-coded annotation types attached to specific lines, three modes of engagement, a browser-direct AI co-reader with keys the user holds, and a built-in corpus of recoverable historical software from FLOW-MATIC (1958) to Apollo 11 (1969).</p>
+
+      <div class="status-note">
+        This repository is the <strong>pre-bench-kit CCS-WB</strong>, frozen at <code>v5.2.0</code> (tag <code>pre-bench-kit</code>). Active development has moved to <a href="https://github.com/Computational-Hermeneutics/CCSbench">CCSbench</a>, rebuilt on <a href="https://github.com/critical-code-studies/bench-kit">bench-kit</a>. This page documents the Classic app as it stands.
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span class="num">6</span><span class="lab">annotation types</span></div>
+        <div class="stat"><span class="num">3</span><span class="lab">modes of engagement</span></div>
+        <div class="stat"><span class="num">7</span><span class="lab">AI providers</span></div>
+        <div class="stat"><span class="num">1958<small>→</small>1969</span><span class="lab">sample corpus</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+
+    <section id="what" class="doc-section">
+      <h2><span class="num">1</span> What it is</h2>
+      <p>The Critical Code Studies Workbench is a browser-based IDE for the close reading of software as a cultural artefact. A user opens a code file (their own, or one of the built-in historical samples), reads it line by line, and attaches typed annotations <span class="pills"><span class="pill pill-obs">OBS</span><span class="pill pill-q">Q</span><span class="pill pill-met">MET</span><span class="pill pill-pat">PAT</span><span class="pill pill-ctx">CTX</span><span class="pill pill-crit">CRIT</span></span> to specific lines or line ranges. Projects save as <code>.ccs</code> files (JSON internally) and merge additively between collaborators without a backend. An optional AI co-reader, configured by the user, can suggest annotations or hold a dialogue in the Critical Code Studies register.</p>
+    </section>
+
+    <section id="quick" class="doc-section">
+      <h2><span class="num">2</span> Quick start</h2>
+      <p>Node 20+ required. No account, no server dependency.</p>
+<pre><code>git clone https://github.com/Computational-Hermeneutics/CCS-WB-classic.git
+cd CCS-WB-classic
+npm install
+npm run dev
+# open http://localhost:3000
+</code></pre>
+      <p>On first load the app opens on a mode chooser. All three modes work offline; the Create mode and the AI co-reader additionally require an AI provider configured in <strong>Settings ▸ AI</strong>.</p>
+      <figure>
+        <img src="assets/img/01-landing.png" alt="Landing page showing Analyze Code, Learn Methods, and Create Code cards on a dark background, with an AI: Off badge in the header." loading="lazy">
+        <figcaption>The mode chooser on first load. <span class="caption-meta">v5.2.0, dark theme.</span></figcaption>
+      </figure>
+    </section>
+
+    <section id="modes" class="doc-section">
+      <h2><span class="num">3</span> The three modes</h2>
+
+      <h3>Analyze Code <small>(Critique)</small></h3>
+      <p>For a user who already has code they want to read closely. The three-panel IDE opens on the user's file, with the file tree on the left, the code editor in the centre, and (when AI is on) a chat / guided-prompts panel on the right. Workflow:</p>
+      <ol>
+        <li>Click <strong>Analyze Code</strong> on the landing page.</li>
+        <li>Use <strong>Load code file</strong> in the files pane to open a file from disk, or <strong>Load sample code</strong> to pick one of the built-in samples.</li>
+        <li>Click a line (or drag a range) to attach an annotation. Pick a type (Observation, Question, Metaphor, Pattern, Context, Critique) and write the body.</li>
+        <li>Save the project with <strong>Save session</strong> (writes a <code>.ccs</code> file to disk).</li>
+      </ol>
+
+      <h3>Learn Methods <small>(Interpret)</small></h3>
+      <p>For a user learning the Critical Code Studies methodology itself. Same IDE, same annotation layer, but the right panel opens a methods guide and an annotation guide rather than a chat, and the sample corpus is foregrounded as the first thing to open. The guided prompts here are scaffolded for a beginner.</p>
+      <figure>
+        <img src="assets/img/02-sample-projects.png" alt="Sample Projects panel listing FLOW-MATIC 1958, IPL-V 1958, Spacewar! 1962, ELIZA Annotated 1965, Apollo 11 Comanche055 1969, each with a short description and annotation count." loading="lazy">
+        <figcaption>Built-in sample corpus (reachable from <strong>Load sample code</strong> in any mode). <span class="caption-meta">v5.2.0, dark theme.</span></figcaption>
+      </figure>
+
+      <h3>Create Code <small>(Vibe coding)</small></h3>
+      <p>For a user who wants to understand an algorithm by building a simple version of it (an ELIZA-shaped chatbot, a poetry generator, a cellular automaton). Requires AI to be enabled in <strong>Settings ▸ AI</strong>. Workflow is iterative: ask for a scaffold, run it, read it, revise. Create keeps a version history inside the project; the <strong>Transfer to Critique</strong> action moves a finished version into the Analyze workbench for close reading.</p>
+    </section>
+
+    <section id="example" class="doc-section">
+      <h2><span class="num">4</span> Worked example: close reading of ELIZA (1965)</h2>
+      <p>The shipped ELIZA sample is distributed with thirty scholarly annotations as a worked example of a Critical Code Studies reading. To open it:</p>
+      <ol>
+        <li>From the mode chooser, click <strong>Learn Methods</strong>.</li>
+        <li>In the files pane, click <strong>Load sample code</strong> (open-book icon).</li>
+        <li>In the panel that appears, click the tile labelled <strong>1965 &middot; ELIZA (Annotated)</strong>.</li>
+        <li>In the file tree that appears, click <strong>ELIZA-1965b.mad</strong>.</li>
+      </ol>
+      <figure>
+        <img src="assets/img/03-workbench-eliza.png" alt="The IDE showing the ELIZA MAD source with inline annotation pills labelled CTX, OBS, PAT and CRIT below the lines they interpret, a file tree on the left listing README.md, ELIZA-1965b.mad and a SCRIPT folder containing DOCTOR.txt, and an annotation summary panel at bottom-left showing counts: OBS 20, Q 2, MET 0, PAT 1, CTX 5, CRIT 2." loading="lazy">
+        <figcaption>Thirty annotations across the ELIZA source. Click any pill to read the full annotation; click the file-tree summary pills to filter the view by type. <span class="caption-meta">v5.2.0, dark theme.</span></figcaption>
+      </figure>
+      <p>Try the <strong>Focus mode</strong> toggle in the editor header (the highlighter icon): unannotated lines dim and the right-margin colour bars brighten, so a dense reading can be navigated by annotation rather than by line.</p>
+      <figure>
+        <img src="assets/img/05-focus-mode.png" alt="The same ELIZA source with focus mode on: lines 13 through 16 are faded almost to invisibility while annotated lines above and below remain fully readable; the right-side colour bars show the type of each annotation." loading="lazy">
+        <figcaption>Focus mode active. <span class="caption-meta">v5.2.0, dark theme.</span></figcaption>
+      </figure>
+    </section>
+
+    <section id="ai" class="doc-section ai-section">
+      <h2><span class="num">5</span> Configuring the AI co-reader</h2>
+      <p>The AI is <strong>off by default</strong> and is strictly opt-in. When off, the Workbench does not call any external service and the AI chat / sparkles buttons stay disabled. To turn it on, open <strong>Settings ▸ AI</strong> and pick one provider from the list.</p>
+      <figure>
+        <img src="assets/img/04-settings-appearance.png" alt="Settings panel with tabs Profile, Code, Appearance, AI and About. The Appearance tab is shown, with controls for Code Font, Code Font Size, Chat Font Size, UI Font Size, annotation display, files pane font size, and at the bottom a Mode selector set to Dark and a Theme selector set to Burgundy." loading="lazy">
+        <figcaption>Settings panel (Appearance tab shown). The AI tab is one across. <span class="caption-meta">v5.2.0, dark theme.</span></figcaption>
+      </figure>
+
+      <h3>Local / free: Ollama <small>(recommended first)</small></h3>
+      <p>Ollama runs an open-weights model locally on the user's own machine. Private, free, no key.</p>
+      <ol>
+        <li>Install Ollama from <a href="https://ollama.com">ollama.com</a> and start it (<code>ollama serve</code> is the daemon; the macOS app starts it automatically).</li>
+        <li>Pull a model: <code>ollama pull llama3.2</code>.</li>
+        <li>In <strong>Settings ▸ AI</strong>, pick provider <strong>Ollama (Local)</strong>. The default base URL <code>http://localhost:11434</code> is correct.</li>
+        <li>Pick a model from the list (or type a custom id).</li>
+        <li>Click <strong>Test Connection</strong>. Expect <em>Connection OK</em> and the installed-models list. If you see <em>Connection failed, click to retry</em>, see Troubleshooting below.</li>
+        <li>Flip <strong>AI Enabled</strong> to on. The <span class="pill pill-off">AI: Off</span> badge in the header should change to <span class="pill pill-on">AI: On</span>.</li>
+      </ol>
+
+      <h3>Hosted providers (key required)</h3>
+      <p>All six hosted providers follow the same shape: get an API key from the provider, paste it into the AI tab, pick a model, test, enable. Keys are stored in your browser's <code>localStorage</code>; they never leave your machine except to call the provider's API directly from your browser.</p>
+
+      <dl class="provider-list">
+        <dt>Anthropic (Claude)</dt>
+        <dd>Create a key at <a href="https://console.anthropic.com/">console.anthropic.com</a> under API Keys. In the AI tab pick provider <strong>Anthropic (Claude)</strong>, paste the key (format <code>sk-ant-...REDACTED</code>), pick a model (<code>claude-sonnet-4</code> is a good default), Test, Enable.</dd>
+
+        <dt>OpenAI</dt>
+        <dd>Create a key at <a href="https://platform.openai.com/api-keys">platform.openai.com/api-keys</a>. Paste (format <code>sk-...REDACTED</code>). Models: <code>gpt-4o</code> for research, <code>gpt-4o-mini</code> for everyday.</dd>
+
+        <dt>Google (Gemini)</dt>
+        <dd>Create a key at <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a>. Paste (format <code>AIza...REDACTED</code>). Models: <code>gemini-2.5-pro</code> for depth, <code>gemini-2.5-flash</code> for speed.</dd>
+
+        <dt>OpenRouter</dt>
+        <dd>One key, many models (Anthropic, OpenAI, open-weights). Key at <a href="https://openrouter.ai/keys">openrouter.ai/keys</a>, format <code>sk-or-v1-...REDACTED</code>. Useful when you want to A/B models from one roster.</dd>
+
+        <dt>Hugging Face</dt>
+        <dd>Create a token at <a href="https://huggingface.co/settings/tokens">huggingface.co/settings/tokens</a> (format <code>hf_...REDACTED</code>). Routes through the Inference API to open-weights models.</dd>
+
+        <dt>OpenAI-Compatible</dt>
+        <dd>For any provider that speaks the OpenAI chat-completions API (LM Studio, vLLM, Together, Groq, DeepInfra, local gateways). Paste the <strong>base URL</strong> plus the key the provider gave you; pick a model id as the provider lists it.</dd>
+      </dl>
+
+      <h3>What success looks like</h3>
+      <ul>
+        <li><strong>Test Connection</strong> shows green <em>Connection OK</em>, plus (for Ollama) a list of installed models.</li>
+        <li>The <strong>AI: Off</strong> badge in the header changes to <strong>AI: On</strong>.</li>
+        <li>Opening a file reveals a <strong>✨ Sparkles</strong> button in the editor header. Clicking it asks the model to suggest annotations.</li>
+        <li>The right-hand chat panel opens on request and streams tokens from the model.</li>
+      </ul>
+
+      <h3>Common error states and fixes</h3>
+      <dl class="trouble-list">
+        <dt>&ldquo;Connection failed&rdquo; on Ollama</dt>
+        <dd>The daemon isn't reachable at the base URL. Check <code>curl http://localhost:11434/api/tags</code> on the terminal. If that works but the Workbench doesn't, Ollama's CORS is blocking the browser; set <code>OLLAMA_ORIGINS=*</code> (or just the Workbench origin) and restart Ollama.</dd>
+
+        <dt>&ldquo;401 Unauthorized&rdquo; / &ldquo;Invalid API key&rdquo;</dt>
+        <dd>The key is wrong, expired, or doesn't have access to the chosen model. Regenerate at the provider's console; paste again (watch for leading/trailing whitespace).</dd>
+
+        <dt>&ldquo;429 Too Many Requests&rdquo; / rate-limit</dt>
+        <dd>The provider's per-minute quota is tripped. Wait a minute, or switch to a cheaper model. For a sustained session, upgrade the account tier at the provider.</dd>
+
+        <dt>&ldquo;Model not found&rdquo; / 404 on a model id</dt>
+        <dd>The id is wrong for that provider, or the account doesn't have access to that model. Pick a different model from the list, or paste the id exactly as the provider's docs give it.</dd>
+
+        <dt>Annotation suggestions arrive empty or truncated</dt>
+        <dd>The model returned invalid JSON, or ran out of output tokens. Annotation calls use a 4096-token budget and a permissive recovery parser; a smaller or weaker model may still fail. Switch to a stronger model (Claude Sonnet 4, GPT-4o, Gemini 2.5 Pro) and retry.</dd>
+      </dl>
+
+      <h3>Hosted vs. local build</h3>
+      <p>In the standard local build (<code>npm run dev</code>) all AI calls go browser-direct using keys from <code>localStorage</code>. In a deployed build (e.g. a Vercel instance with provider env vars set), the server routes under <code>/api/chat</code> act as a fallback for users without their own keys, with the same provider shape.</p>
+    </section>
+
+    <section id="trouble" class="doc-section">
+      <h2><span class="num">6</span> Troubleshooting</h2>
+      <dl class="trouble-list">
+        <dt>Port 3000 already in use</dt>
+        <dd>Another dev server is running. Kill it (<code>lsof -ti:3000 | xargs kill</code>) or set <code>PORT=3001 npm run dev</code>.</dd>
+
+        <dt>Service worker serves a stale build after an update</dt>
+        <dd>CCS-WB is a PWA; the service worker caches the shell. In the browser's DevTools, Application ▸ Service Workers ▸ Unregister, then hard reload. The service worker only intercepts same-origin requests, so this never affects AI provider calls.</dd>
+
+        <dt>Annotations disappear after opening a different project</dt>
+        <dd>Projects don't auto-save unless the browser has File System Access (Chromium-based browsers). Always use <strong>Save session</strong> to write a <code>.ccs</code> file before switching, or Chrome will prompt to grant filesystem access the first time you Save and then auto-save after that.</dd>
+
+        <dt>Merging a collaborator's <code>.ccs</code> file: &ldquo;drift&rdquo; warnings</dt>
+        <dd>Expected when the two sides edited the same file. Merge is additive, keyed by annotation id; drifted anchors are imported but flagged for review rather than silently binding to the wrong line. Review the flagged items in the annotation summary pane.</dd>
+
+        <dt>Cloud (Supabase) features missing</dt>
+        <dd>The entire cloud subsystem is gated by <code>cloud.config.json</code> at the repo root. Classic ships with cloud on. If you forked and set <code>enabled: false</code>, the Cloud tab in Settings shows a null state and no Supabase client is instantiated.</dd>
+      </dl>
+    </section>
+
+    <section id="links" class="doc-section">
+      <h2><span class="num">7</span> Links</h2>
+      <ul class="link-list">
+        <li><a href="https://github.com/Computational-Hermeneutics/CCS-WB-classic">Source repository (this archive)</a></li>
+        <li><a href="https://github.com/Computational-Hermeneutics/CCSbench">CCSbench</a>: bench-kit-based successor</li>
+        <li><a href="https://github.com/critical-code-studies/bench-kit">bench-kit</a>: the shared foundation for the readings</li>
+        <li><a href="https://github.com/Computational-Hermeneutics/CCS-WB-classic/blob/main/LICENSE">Licence</a>: GPL-3.0-or-later</li>
+        <li><a href="https://github.com/Computational-Hermeneutics/CCS-WB-classic/blob/main/README.md">README (with full version history)</a></li>
+        <li><a href="https://computational-hermeneutics.github.io/">Computational Hermeneutics (umbrella)</a></li>
+        <li><a href="https://critical-code-studies.github.io/">Critical Code Studies (readings)</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Critical Code Studies Workbench · Classic. Copyright &copy; 2025&ndash;2026 David M. Berry. Licensed GPL-3.0-or-later.</p>
+      <p>This page documents the pre-bench-kit CCS-WB (frozen at v5.2.0, tag <code>pre-bench-kit</code>). The successor is <a href="https://github.com/Computational-Hermeneutics/CCSbench">CCSbench</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    var root = document.documentElement;
+    var btn = document.querySelector('.theme-toggle');
+    if (!btn) return;
+    function apply(theme){ root.setAttribute('data-theme', theme); try { localStorage.setItem('ccs-theme', theme); } catch(e){} }
+    btn.addEventListener('click', function(){
+      var cur = root.getAttribute('data-theme');
+      if (!cur) {
+        cur = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+      apply(cur === 'light' ? 'dark' : 'light');
+    });
+  })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+/* ==========================================================================
+   CCS Workbench Classic docs page: additions on top of the umbrella site.css
+   Keeps all colour tokens inherited; adds only the components the docs page
+   introduces (classic tag, stat row, annotation pills, dl variants).
+   ========================================================================== */
+
+/* The Classic tag inside the brand name */
+.classic-tag {
+  display: inline-block;
+  margin-left: 0.4em;
+  padding: 0.1em 0.5em;
+  font-family: var(--mono);
+  font-size: 0.65em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--beam);
+  border: 1px solid var(--beam);
+  border-radius: 2px;
+  vertical-align: 0.15em;
+}
+
+/* Hero wrap: a readable column, not full-bleed */
+.hero-wrap { max-width: 820px; }
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--beam);
+  margin: 0 0 0.6rem;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+  line-height: 1.15;
+  color: var(--bright);
+  margin: 0 0 1.2rem;
+}
+.hero .lede {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0 0 1.6rem;
+}
+
+.status-note {
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-left: 3px solid var(--beam);
+  padding: 0.9rem 1.1rem;
+  margin: 1.4rem 0;
+  font-family: var(--serif);
+  font-size: 0.98rem;
+  color: var(--ink);
+}
+.status-note code { font-family: var(--mono); font-size: 0.9em; }
+.status-note a { color: var(--beam); }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1.8rem 0 0.5rem;
+}
+.stat {
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: 3px;
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.stat .num {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--bright);
+  line-height: 1;
+}
+.stat .num small { font-size: 0.6em; opacity: 0.6; font-weight: 400; }
+.stat .lab {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-dim);
+}
+@media (max-width: 720px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Doc sections */
+.doc-section {
+  margin: 3.5rem 0;
+  scroll-margin-top: 100px;
+}
+.doc-section h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.75rem;
+  color: var(--bright);
+  margin: 0 0 1.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--line-soft);
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+}
+.doc-section h2 .num {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  color: var(--beam);
+  letter-spacing: 0.05em;
+  background: var(--mark);
+  padding: 0.1em 0.55em;
+  border-radius: 2px;
+}
+.doc-section h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--bright);
+  margin: 2rem 0 0.6rem;
+}
+.doc-section h3 small {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink-dim);
+  font-size: 0.85em;
+}
+.doc-section p, .doc-section li { font-family: var(--serif); line-height: 1.65; }
+.doc-section ol, .doc-section ul { padding-left: 1.4rem; }
+.doc-section ol li, .doc-section ul li { margin-bottom: 0.35rem; }
+.doc-section code {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  background: var(--code-bg);
+  border: 1px solid var(--line-soft);
+  padding: 0.08em 0.35em;
+  border-radius: 2px;
+}
+.doc-section pre {
+  background: var(--code-bg);
+  border: 1px solid var(--line-soft);
+  box-shadow: var(--code-shadow);
+  border-radius: 3px;
+  padding: 1rem 1.2rem;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 1rem 0;
+}
+.doc-section pre code { background: none; border: none; padding: 0; font-size: inherit; }
+
+figure {
+  margin: 1.4rem 0 1.8rem;
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: 3px;
+  padding: 0.5rem;
+}
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+figcaption {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--ink-dim);
+  padding: 0.6rem 0.4rem 0.3rem;
+  line-height: 1.5;
+}
+.caption-meta {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-dim);
+  opacity: 0.7;
+  margin-left: 0.5em;
+}
+
+/* Annotation pills, matching the Workbench's six types */
+.pills { display: inline-flex; gap: 0.3rem; margin-left: 0.3em; vertical-align: baseline; }
+.pill {
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+  border: 1px solid currentColor;
+  text-transform: uppercase;
+}
+.pill-obs  { color: #6ea8e0; }
+.pill-q    { color: #e0b84f; }
+.pill-met  { color: #c79be0; }
+.pill-pat  { color: #6fdc8c; }
+.pill-ctx  { color: #a0a8b8; }
+.pill-crit { color: #d08080; }
+.pill-off  { color: #d08080; background: rgba(208,128,128,0.1); }
+.pill-on   { color: #6fdc8c; background: rgba(111,220,140,0.1); }
+
+/* Provider definition list */
+.provider-list, .trouble-list {
+  margin: 1rem 0;
+  padding: 0;
+}
+.provider-list dt, .trouble-list dt {
+  font-family: var(--serif);
+  font-weight: 600;
+  color: var(--bright);
+  font-size: 1rem;
+  margin: 1.1rem 0 0.3rem;
+}
+.provider-list dd, .trouble-list dd {
+  font-family: var(--serif);
+  color: var(--ink);
+  margin: 0 0 0.3rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--line-soft);
+  line-height: 1.6;
+}
+.provider-list dd code, .trouble-list dd code { font-size: 0.88em; }
+
+.link-list { list-style: none; padding-left: 0; }
+.link-list li { margin-bottom: 0.4rem; font-family: var(--serif); }
+.link-list a { color: var(--beam); }
+
+/* The AI section gets a subtle highlight because it's the big one */
+.ai-section {
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: 3px;
+  padding: 1.6rem 1.8rem;
+}
+.ai-section h2 { margin-top: 0; }
+
+/* Footer */
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--line-soft);
+  background: var(--bg-2);
+  color: var(--ink-dim);
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.site-footer a { color: var(--beam); }
+.site-footer code { font-family: var(--mono); font-size: 0.88em; }
+.site-footer p { margin: 0.3rem 0; }
