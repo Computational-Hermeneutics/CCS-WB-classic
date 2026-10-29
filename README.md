@@ -643,7 +643,7 @@ the current release. See [NOTICE](NOTICE) for the full relicensing statement.
 
 ## Citation
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23714574.svg)](https://doi.org/10.5281/zenodo.23714574)
+<a href="https://doi.org/10.5281/zenodo.23714574"><img src="https://zenodo.org/badge/1137153170.svg" alt="DOI"></a>
 
 Archived on Zenodo. The badge above is the concept DOI (10.5281/zenodo.23714574), which always resolves to the latest archived snapshot of CCS-WB-classic. Cite a specific version with its own DOI (listed on the Zenodo record under *Versions*).
 
