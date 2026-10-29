@@ -20,8 +20,6 @@
 
 **Version 5.2.2** (Classic rebrand, Zenodo metadata) | Final frozen baseline: v5.2.0 / tag `pre-bench-kit` | CCS Methodology v2.7
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23714574.svg)](https://doi.org/10.5281/zenodo.23714574) &nbsp; <sub>(concept DOI, resolves to the latest archived snapshot)</sub>
-
 A web application for close reading and hermeneutic analysis of software as cultural artefact.
 
 ![Annotated close reading of the 1965 ELIZA MAD source in the Workbench](docs/screenshots/03-workbench-eliza.png)
@@ -642,5 +640,15 @@ the current release. See [NOTICE](NOTICE) for the full relicensing statement.
 - Built with [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/)
 - Developed with [Claude Code](https://claude.ai/claude-code) (Anthropic)
 - Co-created at CCSWG 2026
+
+## Citation
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23714574.svg)](https://doi.org/10.5281/zenodo.23714574)
+
+Archived on Zenodo. The badge above is the concept DOI (10.5281/zenodo.23714574), which always resolves to the latest archived snapshot of CCS-WB-classic. Cite a specific version with its own DOI (listed on the Zenodo record under *Versions*).
+
+Suggested citation (v5.2.2):
+
+> Berry, D. M. (2026). *Critical Code Studies Workbench, Classic (pre-bench-kit)* (v5.2.2). Zenodo. https://doi.org/10.5281/zenodo.23715265
 
 <!-- It looks like you're reading a README. Would you like help with that? -->
